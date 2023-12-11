@@ -1,0 +1,255 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  color: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.titanStar {
+  background-image: url("../public/assets/talent-calc-bg.png");
+  min-width: 820px;
+  padding: 15px;
+  border: 2px solid #333333;
+}
+
+.titanStar h3 {
+  background: rgba(33, 33, 33, 0.6);
+  margin: 0 0 60px 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.titanStar__content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.titanStar__points {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 25%;
+}
+
+.points {
+  border: 1px solid #333333;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+  width: auto;
+  margin-top: 25px;
+}
+
+.points__label {
+  color: #4682b4;
+  font-size: 20px;
+}
+
+.path {
+  display: flex;
+  align-items: center;
+}
+
+.path:not(:first-child) {
+  margin-top: 50px;
+}
+
+.path__title {
+  width: 100px;
+  font-size: 12px;
+}
+
+.gradient--active {
+  background: rgb(65, 216, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(65, 216, 255, 1) 0%,
+    rgba(65, 216, 255, 1) 25%,
+    rgba(0, 164, 255, 1) 41%,
+    rgba(65, 216, 255, 1) 41%
+  );
+
+  -webkit-box-shadow: 0 0 10px rgba(219, 225, 236, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(219, 225, 236, 0.5);
+  box-shadow: 0 0 10px rgba(219, 225, 236, 0.5);
+
+  position: relative;
+  z-index: 1;
+}
+
+.gradient {
+  background: rgb(80, 80, 80);
+  background: linear-gradient(
+    0deg,
+    rgba(80, 80, 80, 1) 0%,
+    rgba(80, 80, 80, 1) 28%,
+    rgba(64, 64, 64, 1) 41%,
+    rgba(80, 80, 80, 1) 41%
+  );
+}
+
+.gradient:hover {
+  background: rgb(96, 96, 96);
+  background: linear-gradient(
+    0deg,
+    rgba(96, 96, 96, 1) 0%,
+    rgba(96, 96, 96, 1) 28%,
+    rgba(80, 80, 80, 1) 41%,
+    rgba(96, 96, 96, 1) 41%
+  );
+}
+
+.path__icon {
+  width: 57px;
+  height: 57px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.path__line {
+  border: 0px;
+  border-top: 1px solid #303030;
+  border-bottom: 1px solid #303030;
+  background-color: #202020;
+  width: 80px;
+  height: 14px;
+}
+
+.path__line--active {
+  border: 0px;
+  border-top: 1px solid #505050;
+  border-bottom: 1px solid #505050;
+  background-color: #303030;
+}
+
+.icons {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background: url("../public/assets/talent-icons-sprite.png");
+}
+.icon1--active {
+  background-position: 0px 0px;
+}
+.icon1 {
+  background-position: 0px -50px;
+}
+.icon1:hover {
+  background-position: 0px -50px;
+}
+.icon2--active {
+  background-position: -50px 0px;
+}
+.icon2 {
+  background-position: -50px -50px;
+}
+.icon2:hover {
+  background-position: -50px 0px;
+}
+.icon3--active {
+  background-position: -100px 0px;
+}
+.icon3 {
+  background-position: -100px -50px;
+}
+.icon3:hover {
+  background-position: -100px 0px;
+}
+.icon4--active {
+  background-position: -150px 0px;
+}
+.icon4 {
+  background-position: -150px -50px;
+}
+.icon4:hover {
+  background-position: -150px 0px;
+}
+.icon5--active {
+  background-position: -200px 0px;
+}
+.icon5 {
+  background-position: -200px -50px;
+}
+.icon5:hover {
+  background-position: -200px 0px;
+}
+.icon6--active {
+  background-position: -250px 0px;
+}
+.icon6:hover {
+  background-position: -250px 0px;
+}
+.icon6 {
+  background-position: -250px -50px;
+}
+.icon7--active {
+  background-position: -300px 0px;
+}
+.icon7:hover {
+  background-position: -300px 0px;
+}
+.icon7 {
+  background-position: -300px -50px;
+}
+.icon8--active {
+  background-position: -200px 0px;
+}
+.icon8:hover {
+  background-position: -200px 0px;
+}
+.icon8 {
+  background-position: -200px -50px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+  .titanStar {
+    min-width: 400px;
+  }
+  .titanStar h3 {
+    margin: 0;
+  }
+  .titanStar__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    margin-bottom: 30px;
+  }
+  .titanStar__points {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .path {
+    display: flex;
+    flex-direction: column;
+  }
+  .path__title {
+    margin: 10px;
+    text-align: center;
+  }
+  .path__line {
+    border: 0px;
+    border-left: 1px solid #303030;
+    border-right: 1px solid #303030;
+    width: 14px;
+    height: 80px;
+  }
+  .path__line--active {
+    border: 0px;
+    border-left: 1px solid #505050;
+    border-right: 1px solid #505050;
+  }
+}
