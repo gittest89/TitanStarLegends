@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Path from "../components/path/Path";
 import Score from "../components/score/Score";
 
@@ -17,14 +17,13 @@ const TitanStar = () => {
   }, [paths]);
 
   const handleUpdateTalent = (talent, talentIndex, index) => {
-    setPaths((prevData) => {
-      const newData = [...prevData];
-      newData[index].talents[talentIndex].isActive = talent.isActive;
-      return newData;
+    setPaths((prevPaths) => {
+      const newPaths = [...prevPaths];
+      newPaths[index].talents = [...newPaths[index].talents];
+      newPaths[index].talents[talentIndex] = talent;
+      return newPaths;
     });
   };
-
-  const PathMemo = React.memo(Path);
 
   return (
     <div className="titanStar">
@@ -36,7 +35,7 @@ const TitanStar = () => {
         <div className="titanStar__paths">
           {paths &&
             paths.map((path, index) => (
-              <PathMemo
+              <Path
                 key={index}
                 title={path.title}
                 talents={path.talents}
